@@ -10,7 +10,7 @@ public class Nev {
     //a nev valojaban logikailagf nem valtozik - allapota nem kell, h valtozzon
     private final String vezeteknev;
     private final String keresztnev;
-    private final List<String> tovabbiNevek;
+    private final List<String> tovabbiNevek;    //ez akk jo ha van, ha nem csak 1 keresztnev van a fileban pl viktoria maria
 
     public Nev(String vezeteknev, String keresztnev, List<String> tovabbiNevek) {
         this.vezeteknev = vezeteknev.trim();
@@ -32,6 +32,7 @@ public class Nev {
 
     /** Teljes névből szétszedés */
     public static Nev fromTeljesNev(String teljes) {
+        //replaceAll("\\s+", " ")-----> kiszedi az osszes szokozoket es tabokat, es berak helyette1-et
         String norm = teljes.trim().replaceAll("\\s+", " ");
         String[] reszek = norm.split(" ");
 
@@ -44,7 +45,7 @@ public class Nev {
 
         List<String> tov = (reszek.length > 2)
                 ? Arrays.asList(Arrays.copyOfRange(reszek, 2, reszek.length))
-                : List.of();
+                : List.of();    //va 2-nel tobb szo van a listaban a 3.-at +ha van meg azt egy kulon listaba teszi. ha nincs, ures listat ad at
 
         return new Nev(vez, ker, tov);
     }
