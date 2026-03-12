@@ -1,0 +1,12 @@
+feladat:
+oop-s en
+kulon package de nem kell mvc
+nev kezelo
+sajat nevet beolv filebol
+megmondja melyik betubol mennyi van --- statisztika
+a monogrammod irja ki -- ponttal elvalasztva
+a keresztneved elso 2 betujet kicsereli a vezetekneved elso 2 nevere -- cserel
+
+bolvasas ugye nem az osztaly
+
+++ betuk abc sorrendben
