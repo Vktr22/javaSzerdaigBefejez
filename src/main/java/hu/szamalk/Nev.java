@@ -18,6 +18,18 @@ public class Nev {
         this.tovabbiNevek = List.copyOf(tovabbiNevek);
     }
 
+    /*
+        OTTHON KIFEJTENIIII
+        A metódus:
+
+        letisztítja a bemeneti nevet (szóközök normalizálása)
+        részekre bontja
+        ellenőrzi, hogy van-e vezetéknév + keresztnév
+        az 1–2. szóból vezetéknév + keresztnév lesz
+        a maradékból további keresztnevek (ha vannak)
+        visszaad egy szép, működő Nev objektumot
+    */
+
     /** Teljes névből szétszedés */
     public static Nev fromTeljesNev(String teljes) {
         String norm = teljes.trim().replaceAll("\\s+", " ");
